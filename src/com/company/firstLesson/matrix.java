@@ -115,24 +115,140 @@ public class matrix {
     }
 
     public void multiMatrix(matrix other) {
-        if (m != other.m && n != other.n) {
+        if (m != other.n && n != other.m) {
             throw new ArithmeticException();
         }
         int[][] newMatrix = new int[m][n];
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-//                newMatrix[i][j] = this.matrix[i][j] * matrix[j][i];
-                newMatrix[i][j] = this.matrix[i][j] * matrix[i][j] + this.matrix[i+1][j] * matrix[i][j+1];
-//                System.out.println(this.matrix[i][j] * matrix[i][j] + this.matrix[i+1][j] * matrix[i][j+1]);
+        for (int i = 0; i < this.matrix.length; i++) {
+            for (int j = 0; j < other.matrix[0].length; j++) {
+                for (int y=0; y<other.matrix.length; y++){
+                    newMatrix[i][j] += this.matrix[i][y] * other.matrix[y][j];
+                }
             }
         }
 
-//        System.out.println("Произведене матриц");
-//        for (int i = 0; i < newMatrix.length; i++) {
-//            for (int j = 0; j < newMatrix[0].length; j++) {
-//                System.out.print(newMatrix[i][j] + "\t");
+        System.out.println("Произведене матриц");
+        for (int i = 0; i < newMatrix.length; i++) {
+            for (int j = 0; j < newMatrix[0].length; j++) {
+                System.out.print(newMatrix[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+    public void exponent(){
+
+        if (this.n != this.m){
+            throw new ArithmeticException();
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите степень: ");
+        int N = scanner.nextInt();
+        int q = 0;
+        int[][] outMatrix = new int[m][n];
+        int[][] same_matrix = new int[m][n];
+        int[][] matrix_buffer = new int[m][n];
+
+        for (int i = 0; i < this.m; i++) {
+            for (int k = 0; k < this.n; k++) {
+                same_matrix[i][k] = this.matrix[i][k];
+            }
+        }
+
+//        int[][] newMatrix = new int[m][n];
+//        for (int i = 0; i < this.matrix.length; i++) {
+//            for (int j = 0; j < same_matrix[0].length; j++) {
+//                for (int y=0; y < same_matrix.length; y++){
+//                    outMatrix[i][j] += this.matrix[i][y] * same_matrix[y][j];
+//                }
 //            }
-//            System.out.println();
 //        }
+
+        if (N == 2) {
+            for (int i = 0; i < this.matrix.length; i++) {
+                for (int j = 0; j < same_matrix[0].length; j++) {
+                    for (int y=0; y < same_matrix.length; y++){
+                        matrix_buffer[i][j] += this.matrix[i][y] * same_matrix[y][j];
+                    }
+                }
+            }
+        } else {
+            for (int i = 0; i < this.matrix.length; i++) {
+                for (int j = 0; j < same_matrix[0].length; j++) {
+                    for (int y=0; y < same_matrix.length; y++){
+                        matrix_buffer[i][j] += this.matrix[i][y] * same_matrix[y][j];
+                    }
+                }
+            }
+            for (int i = 0; i < this.matrix.length; i++) {
+                for (int j = 0; j < matrix_buffer[0].length; j++) {
+                    for (int y=0; y < matrix_buffer.length; y++){
+                        outMatrix[i][j] += this.matrix[i][y] * matrix_buffer[y][j];
+//                        System.out.println(matrix_buffer[y][j]);
+                    }
+                }
+            }
+//            while (q<N){
+//                for (int i = 0; i < this.matrix.length; i++) {
+//                    for (int j = 0; j < matrix_buffer[0].length; j++) {
+//                        for (int y=0; y < matrix_buffer.length; y++){
+//                            outMatrix[i][j] += this.matrix[i][y] * matrix_buffer[y][j];
+////                        System.out.println(matrix_buffer[y][j]);
+//                        }
+//                    }
+//                }
+//                q++;
+//            }
+
+
+
+
+
+
+
+
+//            for (int i = 0; i < this.matrix.length; i++) {
+//                for (int j = 0; j < same_matrix[0].length; j++) {
+//                    for (int y=0; y < same_matrix.length; y++){
+//                        outMatrix[i][j] += this.matrix[i][y] * same_matrix[y][j];
+//                    }
+//                }
+//            }
+//            System.out.println("После else");
+//            for (int i = 0; i < outMatrix.length; i++) {
+//                for (int j = 0; j < outMatrix[0].length; j++) {
+//                    System.out.print(outMatrix[i][j] + "\t");
+//                }
+//                System.out.println();
+//            }
+////            System.out.println(outMatrix[0][0]);
+//            while (q < N){
+//                for (int i = 0; i < same_matrix.length; i++) {
+//                    for (int j = 0; j < outMatrix[0].length; j++) {
+//                        for (int y=0; y < outMatrix.length; y++){
+//                            outMatrix[i][j] += same_matrix[i][y] * outMatrix[y][j];
+//                        }
+//                    }
+//                }
+//                System.out.println("После q=" + q);
+//                for (int i = 0; i < outMatrix.length; i++) {
+//                    for (int j = 0; j < outMatrix[0].length; j++) {
+//                        System.out.print(outMatrix[i][j] + "\t");
+//                    }
+//                    System.out.println();
+//                }
+////                System.out.println("HERE");
+//                q++;
+//            }
+        }
+
+        System.out.println("Возведение матрицы в степень");
+        for (int i = 0; i < outMatrix.length; i++) {
+            for (int j = 0; j < outMatrix[0].length; j++) {
+                System.out.print(outMatrix[i][j] + "\t");
+            }
+            System.out.println();
+        }
     }
 }
