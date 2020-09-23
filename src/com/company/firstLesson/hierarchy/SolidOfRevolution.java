@@ -1,10 +1,9 @@
 package com.company.firstLesson.hierarchy;
 
 public class SolidOfRevolution extends Shape{
-    double radius;
+    private double radius;
 
     public SolidOfRevolution(){
-
     }
 
     public SolidOfRevolution(double radius){
@@ -12,6 +11,6 @@ public class SolidOfRevolution extends Shape{
     }
 
     public double getRadius() {
-        return radius;
+        return this.radius;
     }
 }

@@ -1,9 +1,9 @@
 package com.company.firstLesson.hierarchy;
 
 public class Cylinder extends SolidOfRevolution{
-    double height;
+    private double height;
 
-    public Cylinder(){
-
+    public Cylinder(double height) {
+        this.height = height;
     }
 }

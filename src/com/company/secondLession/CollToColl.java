@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class CollToColl {
-//    public static <T>Collection<T> removeDuplicates(Collection<T>) {
-//        return new HashSet<>(Collection<T>);
-//    }
+    public static <T> Collection<T> removeDuplicates(Collection<T> collection) {
+        return new HashSet<>(collection);
+    }
 }

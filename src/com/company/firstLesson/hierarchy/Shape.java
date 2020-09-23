@@ -1,10 +1,10 @@
 package com.company.firstLesson.hierarchy;
 
 public class Shape {
-    public int x;
-    public int y;
-    public int z;
-    public double volume;
+    private int x;
+    private int y;
+    private int z;
+    private double volume;
 
     public Shape(){
         this.x = 0;
@@ -22,5 +22,9 @@ public class Shape {
 
     public double getVolume(){
         return volume;
+    }
+
+    public void setVolume(double volume) {
+        this.volume = volume;
     }
 }
