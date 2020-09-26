@@ -11,9 +11,9 @@ public class Freqdict {
     }
 
     public void count() {
-        for (el : mainText) {
-//            if (el )
-        }
+//        for (el : mainText); {
+//            System.out.println(el);
+//        }
     }
 
 }
