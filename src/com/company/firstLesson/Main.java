@@ -29,7 +29,6 @@ public class Main {
 //        test2.matSum(test);
 //        test2.matDet(test);
 //        test2.matMultiMat(test);
-        //TODO scan in void or outside?
 //        test2.matMulti(scan.nextInt());
 //        test2.matPow(scan.nextInt());
 //        test2.Transposed();

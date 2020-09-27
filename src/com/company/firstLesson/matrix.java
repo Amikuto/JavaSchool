@@ -121,7 +121,7 @@ public class matrix {
         int[][] newMatrix = new int[m][n];
         for (int i = 0; i < this.matrix.length; i++) {
             for (int j = 0; j < other.matrix[0].length; j++) {
-                for (int y=0; y<other.matrix.length; y++){
+                for (int y = 0; y < other.matrix.length; y++){
                     newMatrix[i][j] += this.matrix[i][y] * other.matrix[y][j];
                 }
             }
@@ -136,6 +136,10 @@ public class matrix {
         }
     }
 
+    public void transpon(){
+
+    }
+
     public void exponent(){
 
         if (this.n != this.m){
@@ -145,16 +149,99 @@ public class matrix {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите степень: ");
         int N = scanner.nextInt();
-        int q = 0;
+        int q = 2;
         int[][] outMatrix = new int[m][n];
         int[][] same_matrix = new int[m][n];
-        int[][] matrix_buffer = new int[m][n];
+//        int[][] matrix_buffer = new int[m][n];
 
         for (int i = 0; i < this.m; i++) {
             for (int k = 0; k < this.n; k++) {
                 same_matrix[i][k] = this.matrix[i][k];
             }
         }
+        int[][] matrix_buffer = new int[m][n];
+        for (int i = 0; i < this.matrix.length; i++) {
+            for (int j = 0; j < same_matrix[0].length; j++) {
+                for (int y = 0; y < same_matrix.length; y++){
+                    matrix_buffer[i][j] += this.matrix[i][y] * same_matrix[y][j];
+                }
+            }
+        }
+
+        System.out.println("Произведене матриц");
+        for (int i = 0; i < matrix_buffer.length; i++) {
+            for (int j = 0; j < matrix_buffer[0].length; j++) {
+                System.out.print(matrix_buffer[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+        for (int i = 0; i < this.matrix.length; i++) {
+            for (int j = 0; j < same_matrix[0].length; j++) {
+                for (int y = 0; y < same_matrix.length; y++){
+                    matrix_buffer[i][j] = this.matrix[i][y] * same_matrix[y][j];
+                }
+            }
+        }
+
+
+//        for (int i = 0; i < matrix_buffer.length; i++) {
+//            for (int j = 0; j < same_matrix[0].length; j++) {
+//                for (int y = 0; y < same_matrix.length; y++){
+//                    matrix_buffer[i][j] += matrix_buffer[i][y] * same_matrix[y][j];
+//                }
+//            }
+//        }
+
+
+//        while (q != N){
+//            System.out.println(q);
+//            for (int i = 0; i < matrix_buffer.length; i++) {
+//                for (int j = 0; j < same_matrix[0].length; j++) {
+//                    for (int y = 0; y < same_matrix.length; y++){
+//                        matrix_buffer[i][j] += matrix_buffer[i][y] * same_matrix[y][j];
+//                    }
+//                }
+//            }
+//            q++;
+//        }
+
+//        for (int i = 0; i < same_matrix.length; i++) {
+//            for (int j = 0; j < same_matrix[0].length; j++) {
+//                System.out.print(same_matrix[i][j] + "\t");
+//            }
+//            System.out.println();
+//        }
+
+        for (int i = 0; i < matrix_buffer.length; i++) {
+            for (int j = 0; j < matrix_buffer[0].length; j++) {
+                System.out.print(matrix_buffer[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+//        for (int i = 0; i < same_matrix.length; i++) {
+//            for (int j = 0; j < matrix_buffer[0].length; j++) {
+//                for (int y=0; y < matrix_buffer.length; y++){
+//                    matrix_buffer[i][j] += same_matrix[i][y] * matrix_buffer[y][j];
+//                }
+//            }
+//        }
+
+//        for (int i = 0; i < this.matrix.length; i++) {
+//            for (int j = 0; j < other.matrix[0].length; j++) {
+//                for (int y=0; y<other.matrix.length; y++){
+//                    newMatrix[i][j] += this.matrix[i][y] * other.matrix[y][j];
+//                }
+//            }
+//        }
+
+//        for (int i = 0; i < matrix_buffer.length; i++) {
+//            for (int j = 0; j < matrix_buffer[0].length; j++) {
+//                System.out.print(matrix_buffer[i][j] + "\t");
+//            }
+//            System.out.println();
+//        }
 
 //        System.out.println("Возведение матрицы в степень");
 //        for (int i = 0; i < outMatrix.length; i++) {
