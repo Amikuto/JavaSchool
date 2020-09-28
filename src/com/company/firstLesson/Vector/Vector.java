@@ -1,7 +1,6 @@
-package com.company.firstLesson;
+package com.company.firstLesson.Vector;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Random;
 

@@ -1,19 +1,19 @@
-package com.company.firstLesson;
+package com.company.firstLesson.Matrix;
 
 import java.util.Scanner;
 
-public class tMatrix {
+public class TestMatrix {
 //    class Matrix {
 
         int rows;
         int columns;
         int[][] matrix;
 
-        tMatrix(){
+        TestMatrix(){
 
         }
 
-        tMatrix(int matrixRows, int matrixColumns) {
+        TestMatrix(int matrixRows, int matrixColumns) {
             rows = matrixRows;
             columns = matrixColumns;
         }
@@ -55,7 +55,7 @@ public class tMatrix {
             }
         }
 
-        void matSum(tMatrix m2) {
+        void matSum(TestMatrix m2) {
 
             int[][] m_out = new int[rows][columns];
             for (int i = 0; i < this.rows; i++) {
@@ -66,7 +66,7 @@ public class tMatrix {
             System.out.println(m_out[0][0]);
         }
 
-        void matDet(tMatrix m2) {
+        void matDet(TestMatrix m2) {
 
             int[][] m_out = new int[rows][columns];
             for (int i = 0; i < this.rows; i++) {
@@ -77,7 +77,7 @@ public class tMatrix {
             System.out.println(m_out[0][0]);
         }
 
-        void matMultiMat(tMatrix m2) {
+        void matMultiMat(TestMatrix m2) {
 
             int[][] m_out = new int[rows][columns];
             Scanner scan = new Scanner(System.in);

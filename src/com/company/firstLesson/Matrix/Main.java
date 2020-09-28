@@ -1,4 +1,4 @@
-package com.company.firstLesson;
+package com.company.firstLesson.Matrix;
 
 public class Main {
 
@@ -35,19 +35,15 @@ public class Main {
 
 //        Vector object = new Vector();
 
-        matrix test = new matrix(2, 2);
+        matrix test = new matrix(3, 3);
 //        matrix test2 = new matrix(2, 2);
 
 //        test.sumMatrix(test2);
 //        test.detMatrix(test2);
 //        test.multiMatrix(test2);
-        test.exponent();
+//        test.exponent();
+        test.transpon();
 
-//        Vector test3 = new Vector(1, 2, 3);
-//        Vector test4 = new Vector();
-//        test3.lengthVector();
-//        test3.multiScalar(test4);
-//        test3.multiVector(test4);
-//        Vector.myMethod();
+
     }
 }
