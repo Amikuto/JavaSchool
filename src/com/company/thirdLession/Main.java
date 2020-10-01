@@ -6,20 +6,33 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-        HashMap<Integer, String> map = new HashMap<>();
+//        HashMap<Integer, String> map = new HashMap<>();
+//
+//        map.put(1, "TOM");
+//        map.put(2, "123");
+//
+//        map.replace(2, "jerry");
+//        map.remove(2);
+//
+//        map.get(1);
+//        map.getOrDefault(2, "DEFAULT");
+//
+//        for (Map.Entry<Integer, String> entry : map.entrySet()) {
+//            System.out.printf("Ключ: %d, Значение %s\n", entry.getKey(), entry.getValue());
+//        }
 
-        map.put(1, "TOM");
-        map.put(2, "123");
-
-        map.replace(2, "jerry");
-        map.remove(2);
-
-        map.get(1);
-        map.getOrDefault(2, "DEFAULT");
-
-        for (Map.Entry<Integer, String> entry : map.entrySet()) {
-            System.out.printf("Ключ: %d, Значение %s\n", entry.getKey(), entry.getValue());
-        }
+        int[][] x = {{1, 2, 3}, {4, 5, 6}};
+        Iterator test = new Iterator(x);
+        test.next();
+        test.next();
+        test.next();
+        test.next();
+        test.next();
+        test.next();
+        test.next();
+        test.previous();
+        test.previous();
+        test.previous();
 
     }
 }

@@ -1,7 +1,8 @@
-package com.company.fourthLesson;
+package com.company.thirdLession;
 
 import java.util.ArrayList;
 import java.util.ListIterator;
+import java.util.NoSuchElementException;
 
 public class Iterator {
     int[][] m;
@@ -25,7 +26,7 @@ public class Iterator {
             System.out.println(list.get(c + 1));
             c++;
         } else {
-            throw new ArithmeticException();
+            throw new NoSuchElementException();
         }
     }
 
