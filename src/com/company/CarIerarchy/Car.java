@@ -1,4 +1,4 @@
-package com.company.fourthLesson;
+package com.company.CarIerarchy;
 
 public class Car {
     protected String color;
@@ -7,6 +7,7 @@ public class Car {
     protected int currSpeed;
     protected int price;
     protected String brand;
+    protected int size = 1;
 
 
     Car(){
@@ -16,18 +17,19 @@ public class Car {
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.transsmissionType = type;
-        this. currSpeed = currSpeed;
+        this.currSpeed = currSpeed;
         this.price = price;
         this.brand = brand;
+        this.size = size;
     }
+
+    public int getSize() { return size; }
 
     public void setCurrSpeed(int currSpeed) {
         this.currSpeed = currSpeed;
     }
 
-    public String getBrand() {
-        return brand;
-    }
+    public String getBrand() { return brand; }
 
     public int getCurrSpeed() {
         return currSpeed;
@@ -91,9 +93,10 @@ public class Car {
         return "Car{" +
                 "color='" + color + '\'' +
                 ", maxSpeed=" + maxSpeed +
-                ", type='" + transsmissionType + '\'' +
+                ", transsmissionType='" + transsmissionType + '\'' +
                 ", currSpeed=" + currSpeed +
                 ", price=" + price +
+                ", brand='" + brand + '\'' +
                 '}';
     }
 }

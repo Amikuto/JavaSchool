@@ -1,7 +1,6 @@
-package com.company.fourthLesson;
+package com.company.CarIerarchy;
 
 public class SportCar extends Car{
-    String brand;
 
     SportCar(){
     }
@@ -10,7 +9,7 @@ public class SportCar extends Car{
         this.color = color;
         this.maxSpeed = maxSpeed;
         this.transsmissionType = type;
-        this. currSpeed = currSpeed;
+        this.currSpeed = currSpeed;
         this.price = price;
         this.brand = brand;
     }
