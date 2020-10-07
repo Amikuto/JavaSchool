@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Garage{
-    int maxCap = 10;
-    int currAuto;
-    Map<String,Integer> dictionary = new HashMap<String,Integer>();
+    private int maxCap = 10;
+    private int currAuto;
+    private Map<String,Integer> dictionary = new HashMap<String,Integer>();
 
     Garage(int maxCap, int currAuto){
         this.maxCap = maxCap;
@@ -24,8 +24,15 @@ public class Garage{
         if (dictionary.keySet().contains(words[words.length-1])){
             int x = dictionary.get(words[words.length-1]);
             dictionary.put(words[words.length-1], x+car.getSize());
+            this.currAuto++;
         } else{
             dictionary.put(words[words.length-1], car.getSize());
+            this.currAuto++;
         }
+        System.out.print(dictionary);
+    }
+
+    public void print(){
+
     }
 }
