@@ -3,6 +3,8 @@ package com.company.CarIerarchy;
 import java.util.HashMap;
 import java.util.Map;
 
+
+//TODO: Do it with cost NOT only with count
 public class Garage{
     private int maxCap = 10;
     private int currAuto;
